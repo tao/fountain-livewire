@@ -1,0 +1,106 @@
+.synopsis {
+  @apply whitespace-pre-wrap;
+}
+
+.note {
+  @apply text-serenity-primary;
+}
+
+.synopsis-hidden {
+  article.fountain {
+    .synopsis {
+      @apply hidden;
+    }
+  }
+}
+
+.fountain {
+  p {
+    @apply whitespace-pre-line;
+  }
+
+  .question-id {
+    @apply pr-2;
+
+    @media(min-width: theme('screens.md')) {
+      @apply absolute w-20 text-right;
+      left: -6rem;
+    }
+  }
+
+  .character.ref {
+    @apply relative;
+  }
+
+  .parenthesis {
+    @apply text-parenthesis mb-0;
+  }
+
+  .dialogue {
+      @apply text-gray-700 italic;
+  }
+
+  .action {
+    //
+  }
+
+  .synopsis {
+    @apply text-synopsis mb-16;
+  }
+
+  .transition {
+      @apply font-bold font-mono uppercase text-right;
+  }
+
+  .scene-heading {
+    @apply underline;
+  }
+
+  .lyrics-title {
+    margin-bottom: 1rem;
+  }
+
+  .lyrics {
+    @apply text-lyrics italic whitespace-pre-wrap;
+  }
+
+  .alert {
+    @apply uppercase whitespace-pre-wrap;
+  }
+
+  .centered {
+    @apply whitespace-pre-wrap;
+  }
+
+   blockquote {
+       p:first-of-type {
+           padding-top: 1rem;
+       }
+
+       p {
+           padding-top: 0rem;
+           padding-bottom: 0rem;
+           margin-bottom: 0rem;
+       }
+
+       margin-bottom: 1rem;
+   }
+
+  ul, ol {
+    li {
+      p {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.footnotes ol {
+  @apply list-outside;
+
+  li::before {
+    color: red;
+  }
+}
