@@ -27873,7 +27873,7 @@ main.debug .header, main.debug .header-sm, main.debug .header-md, main.debug .he
   position: relative;
 }
 
-.fountain .parenthesis {
+.fountain .parenthetical {
   color: var(--color-parenthesis);
   margin-bottom: 0;
 }
@@ -27882,7 +27882,14 @@ main.debug .header, main.debug .header-sm, main.debug .header-md, main.debug .he
   --text-opacity: 1;
   color: #4a5568;
   color: rgba(74, 85, 104, var(--text-opacity));
-  font-style: italic;
+}
+
+.fountain .dialogue::before {
+  content: "\201C";
+}
+
+.fountain .dialogue::after {
+  content: "\201D";
 }
 
 .fountain .synopsis {

@@ -2,12 +2,11 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use App\Fountain\FountainParser;
-use App\Fountain\FountainScribe as Scribe;
 use App\Fountain\FountainTags;
+use Highlight\Highlighter;
 
 class Fountain extends Component
 {
@@ -37,13 +36,15 @@ class Fountain extends Component
             if ($this->raw) {
                 try {
                     // Highlight some code.
-                    $hl = new \Highlight\Highlighter();
+                    $hl = new Highlighter();
                     $highlighted = $hl->highlight('html', $html);
 
-                    $this->output= ""
-                        . "<pre class='w-full'><code class=\"hljs {$highlighted->language}\">"
+                    $this->output = ''
+                        . '<pre class="w-full">'
+                        . '<code class="hljs {$highlighted->language}">'
                         . $highlighted->value
-                        . "</code></pre>";
+                        . '</code>'
+                        . '</pre>';
                 }
                 catch (\DomainException $e) {
                     // This is thrown if the specified language does not exist
@@ -54,7 +55,6 @@ class Fountain extends Component
                 $this->output = $html;
             }
 
-
         } catch (\ErrorException $e) {
             $this->output = $e->getMessage();
         }
@@ -63,8 +63,7 @@ class Fountain extends Component
     public function render()
     {
         if ($this->input) {
-            // parse fountain
-            $this->parse();
+            $this->parse();     // parse fountain
         }
 
         return view('livewire.fountain');

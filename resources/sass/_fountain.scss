@@ -32,12 +32,20 @@
     @apply relative;
   }
 
-  .parenthesis {
+  .parenthetical {
     @apply text-parenthesis mb-0;
   }
 
   .dialogue {
-      @apply text-gray-700 italic;
+      @apply text-gray-700;
+  }
+
+  .dialogue::before {
+    content: "“";
+  }
+
+  .dialogue::after {
+    content: "”";
   }
 
   .action {
