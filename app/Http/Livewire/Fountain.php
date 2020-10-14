@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use App\Fountain\FountainParser;
 use App\Fountain\FountainScribe as Scribe;
@@ -16,6 +18,7 @@ class Fountain extends Component
     public function mount()
     {
         $this->output = "Type your text into the textarea on the left to get started.";
+        $this->input = Storage::get('scripts/lotr.fountain');
     }
 
     public function markup() {
