@@ -41,7 +41,7 @@ class Fountain extends Component
 
                     $this->output = ''
                         . '<pre class="w-full">'
-                        . '<code class="hljs {$highlighted->language}">'
+                        . '<code class="hljs rounded {$highlighted->language}">'
                         . $highlighted->value
                         . '</code>'
                         . '</pre>';

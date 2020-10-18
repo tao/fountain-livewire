@@ -1,0 +1,97 @@
+.synopsis {
+    @apply whitespace-pre-wrap;
+}
+
+.notes,.note {
+    @apply text-indigo-700;
+}
+
+.synopsis-hidden {
+    article.fountain {
+        .synopsis {
+            @apply hidden;
+        }
+    }
+}
+
+.fountain {
+    p {
+        @apply whitespace-pre-line;
+    }
+
+    .parenthetical {
+        @apply text-green-700 mb-0;
+    }
+
+    .dialogue {
+        @apply text-gray-700;
+    }
+
+    .dialogue::before {
+        content: "“";
+    }
+
+    .dialogue::after {
+        content: "”";
+    }
+
+    .synopsis {
+        @apply text-blue-800 mb-16;
+    }
+
+    .transition {
+        @apply font-bold font-mono uppercase text-right;
+    }
+
+    .scene-heading {
+        @apply text-xl underline;
+    }
+
+    .lyrics-title {
+        margin-bottom: 1rem;
+    }
+
+    .lyrics {
+        @apply text-purple-800 italic whitespace-pre-wrap pl-4;
+    }
+
+    .alert {
+        @apply uppercase whitespace-pre-wrap;
+    }
+
+    .centered {
+        @apply whitespace-pre-wrap;
+    }
+
+    blockquote {
+        p:first-of-type {
+            padding-top: 1rem;
+        }
+
+        p {
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            margin-bottom: 0rem;
+        }
+
+        margin-bottom: 1rem;
+    }
+
+    ul, ol {
+        li {
+            p {
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.footnotes ol {
+    @apply list-outside;
+
+    li::before {
+        color: red;
+    }
+}

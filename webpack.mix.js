@@ -1,43 +1,24 @@
-let mix = require('laravel-mix');
-let purgecss = require('laravel-mix-purgecss');
-let tailwindcss = require('tailwindcss');
-
+const mix = require('laravel-mix');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
  |--------------------------------------------------------------------------
  |
  | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
+ | for your Laravel applications. By default, we are compiling the CSS
  | file for the application as well as bundling up all the JS files.
  |
  */
 
-mix.sass('resources/sass/site.scss', 'public/css')
-    .options({
-        processCssUrls: false,
-        postCss: [
-            tailwindcss('./tailwind.config.js'),
-        ]
-    });
+mix.js('resources/js/app.js', 'public/js')
 
+mix.postCss('resources/css/tailwind.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('postcss-nested'),
+    require('postcss-preset-env')({stage: 0})
+])
 
 if (mix.inProduction()) {
-    mix
-        .version()
-        .purgeCss();
+   mix.version();
 }
-
-/*
- |--------------------------------------------------------------------------
- | Statamic Control Panel Assets
- |--------------------------------------------------------------------------
- |
- | Feel free to add your own JS or CSS to the Statamic Control Panel.
- | https://statamic.dev/extending/control-panel#adding-css-and-js-assets
- |
- */
-
-mix.copy('resources/css/atom-one-dark.css', 'public/css/atom-one-dark.css')
-    .copy('resources/css/atom-one-dark-reasonable.css', 'public/css/atom-one-dark-reasonable.css')
-    .copy('resources/css/atom-one-light.css', 'public/css/atom-one-light.css');

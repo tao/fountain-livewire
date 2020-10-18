@@ -97,14 +97,58 @@
 
 /***/ }),
 
-/***/ 0:
-/*!*****************************************************************!*\
-  !*** multi ./resources/js/site.js ./resources/css/tailwind.css ***!
-  \*****************************************************************/
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module '/Users/tao/Code/fountain/livewire/resources/js/site.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+/***/ }),
+
+/***/ "./resources/js/bootstrap.js":
+/*!***********************************!*\
+  !*** ./resources/js/bootstrap.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// window._ = require('lodash');
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+// window.axios = require('axios');
+// window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+// import Echo from 'laravel-echo';
+// window.Pusher = require('pusher-js');
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     forceTLS: true
+// });
+
+/***/ }),
+
+/***/ 0:
+/*!****************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/tailwind.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! /Users/tao/Code/fountain/livewire/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/tao/Code/fountain/livewire/resources/css/tailwind.css */"./resources/css/tailwind.css");
 
 

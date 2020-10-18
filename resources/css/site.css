@@ -1,0 +1,124 @@
+/* This is all you. */
+nav {
+    li.current {
+        a {
+            @apply text-gray-900;
+        }
+    }
+}
+
+#mobile-nav {
+    @apply border-b absolute w-full bg-white;
+    top: 73px;
+}
+
+@screen lg {
+    #mobile-nav {
+        @apply hidden !important;
+    }
+}
+
+#nav-toggle.open {
+    #menu {
+        @apply hidden;
+    }
+    #exit {
+        @apply block;
+    }
+}
+
+#nav-toggle.closed {
+    #menu {
+        @apply block;
+    }
+    #exit {
+        @apply hidden;
+    }
+}
+
+main {
+    margin-top: 4.5rem;
+
+    a {
+        @apply text-blue-700;
+    }
+}
+
+section {
+    @apply max-w-6xl mx-auto py-32 px-8;
+}
+
+blockquote {
+    @apply text-gray-700 ml-4 pl-4 border-l-4 border-purple-300 mb-8 pt-4;
+}
+
+h1 {
+    @apply text-4xl text-purple-800;
+}
+
+h2 {
+    @apply text-3xl text-gray-600;
+}
+
+h3 {
+    @apply text-2xl text-gray-800;
+}
+
+h4 {
+    @apply uppercase tracking-wide pb-2;
+    color: palevioletred;
+}
+
+h5 {
+    @apply uppercase tracking-wide font-semibold pb-2
+}
+
+h6 {
+    @apply tracking-wide font-semibold pb-2 text-gray-700;
+}
+
+p {
+    @apply leading-relaxed pb-4;
+}
+
+p.leading {
+    @apply my-4 text-lg;
+}
+
+a {
+    @apply text-gray-600;
+}
+
+a:hover {
+    @apply text-blue-900;
+}
+
+article {
+    @apply leading-relaxed pl-4;
+
+    h3 {
+        @apply mt-8;
+    }
+
+    h4, h5, h6 {
+        @apply mt-4;
+    }
+
+    hr {
+        @apply my-4;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    img, pre {
+        @apply my-4 !important;
+    }
+}
+
+p {
+    code {
+        @apply text-pink-700;
+    }
+}
