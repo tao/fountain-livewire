@@ -4,8 +4,9 @@ namespace App\Http\Livewire;
 
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
-use App\Fountain\FountainParser;
-use App\Fountain\FountainTags;
+use Fountain\Screenplay;
+// use Fountain\FountainParser;
+// use Fountain\FountainTags;
 use Highlight\Highlighter;
 
 class Fountain extends Component
@@ -28,10 +29,9 @@ class Fountain extends Component
     {
         // parse the raw text as fountain
         try {
-            // determine fountain elements
-            $fountainElements = (new FountainParser())->parse($this->input);
-            // parse fountain elements into html
-            $html = (new FountainTags())->parse($fountainElements);
+            $screenplay = (new Screenplay());
+            // parse screenplay into html
+            $html = $screenplay->parse($this->input);
 
             if ($this->raw) {
                 try {
