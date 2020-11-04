@@ -148,8 +148,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/tao/Code/fountain/livewire/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/tao/Code/fountain/livewire/resources/css/tailwind.css */"./resources/css/tailwind.css");
+__webpack_require__(/*! /Users/daniel/Code/fountain-livewire/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/daniel/Code/fountain-livewire/resources/css/tailwind.css */"./resources/css/tailwind.css");
 
 
 /***/ })
