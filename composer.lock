@@ -885,16 +885,16 @@
         },
         {
             "name": "karuna/fountain",
-            "version": "v1.2.1",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tao/fountain.git",
-                "reference": "c8ab160f747d95aab4ab2073c4de123efd40618d"
+                "reference": "7e360b8c3f0c257ee1ee85e24a318bb90628b0a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tao/fountain/zipball/c8ab160f747d95aab4ab2073c4de123efd40618d",
-                "reference": "c8ab160f747d95aab4ab2073c4de123efd40618d",
+                "url": "https://api.github.com/repos/tao/fountain/zipball/7e360b8c3f0c257ee1ee85e24a318bb90628b0a0",
+                "reference": "7e360b8c3f0c257ee1ee85e24a318bb90628b0a0",
                 "shasum": ""
             },
             "require": {
@@ -929,7 +929,7 @@
                 "issues": "https://github.com/tao/fountain/issues",
                 "source": "https://github.com/tao/fountain"
             },
-            "time": "2020-11-03T11:03:18+00:00"
+            "time": "2020-11-04T10:38:11+00:00"
         },
         {
             "name": "laravel/framework",
